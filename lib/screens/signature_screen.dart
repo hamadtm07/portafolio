@@ -126,32 +126,6 @@ class SignatureScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    Text(
-                      'Código de Verificación: #FL-2026-HT-UNIMAR',
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontFamily: 'monospace',
-                        color: theme.textTheme.bodySmall?.color?.withValues(alpha: 0.6),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Container(
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: theme.colorScheme.surface,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Text(
-                        '«Certifico la autoría de esta aplicación móvil realizada para la materia Programación III, estructurada con segmentación de carpetas, temas dinámicos, navegación por rutas y buenas prácticas de Flutter.»',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontStyle: FontStyle.italic,
-                          color: theme.textTheme.bodyMedium?.color?.withValues(alpha: 0.8),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
