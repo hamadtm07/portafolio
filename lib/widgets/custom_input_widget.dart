@@ -35,7 +35,6 @@ class _CustomInputState extends State<CustomInput> {
     _obscureText = widget.obscureText;
   }
 
-  // Validador por defecto para los campos
   String? _validar(String? value) {
     if (widget.customValidator != null) {
       return widget.customValidator!(value);

@@ -23,7 +23,6 @@ class CustomFooter extends StatelessWidget {
         children: [
           const Divider(),
           const SizedBox(height: 12),
-          // Iconos de redes sociales
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

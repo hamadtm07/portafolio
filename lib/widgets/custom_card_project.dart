@@ -72,7 +72,6 @@ class CustomCardProject extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Imagen del proyecto con FadeInImage y placeholder local
             FadeInImage(
               placeholder: const AssetImage('assets/jar-loading.gif'),
               image: NetworkImage(project.imageUrl),
@@ -95,13 +94,11 @@ class CustomCardProject extends StatelessWidget {
                 );
               },
             ),
-            // Contenido textual de la tarjeta
             Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Etiqueta de categoría
                   Text(
                     project.tag.toUpperCase(),
                     style: TextStyle(
@@ -112,7 +109,6 @@ class CustomCardProject extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 4),
-                  // Título del proyecto
                   Text(
                     project.title,
                     style: const TextStyle(
@@ -121,7 +117,6 @@ class CustomCardProject extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 6),
-                  // Breve descripción
                   Text(
                     project.description,
                     maxLines: 2,
@@ -132,7 +127,6 @@ class CustomCardProject extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 12),
-                  // Chips de tecnologías y botón
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

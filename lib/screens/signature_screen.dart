@@ -34,7 +34,6 @@ class SignatureScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
           children: [
-            // Tarjeta principal con la firma e identidad del desarrollador
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
@@ -48,7 +47,6 @@ class SignatureScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(24.0),
                 child: Column(
                   children: [
-                    // Avatar con halo distintivo
                     Container(
                       padding: const EdgeInsets.all(4),
                       decoration: BoxDecoration(
@@ -72,7 +70,6 @@ class SignatureScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 16),
-                    // Nombre y rol
                     const Text(
                       'Hamad El Troudi',
                       style: TextStyle(
@@ -100,8 +97,6 @@ class SignatureScreen extends StatelessWidget {
                     const SizedBox(height: 20),
                     const Divider(),
                     const SizedBox(height: 12),
-
-                    // Firma digital manuscrita
                     const Text(
                       'FIRMA DIGITAL DEL AUTOR',
                       style: TextStyle(
@@ -141,8 +136,6 @@ class SignatureScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 16),
-
-                    // Compromiso de originalidad académica
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
@@ -163,10 +156,7 @@ class SignatureScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             const SizedBox(height: 20),
-
-            // Información de Contacto Directo
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
@@ -232,10 +222,7 @@ class SignatureScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             const SizedBox(height: 24),
-
-            // Botón para volver
             SizedBox(
               width: double.infinity,
               child: FilledButton.icon(

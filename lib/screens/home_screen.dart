@@ -14,10 +14,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // Índice actual de la barra de navegación
   int _currentIndex = 0;
 
-  // Lista de comentarios en memoria (inicia con algunos de muestra y permite agregar nuevos)
   final List<CommentModel> _comentarios = [
     const CommentModel(
       author: 'Prof. Héctor',
@@ -44,7 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
 
-    // Vistas correspondientes a cada pestaña
     final views = [
       const _AboutView(),
       const _WhatIDoView(),
@@ -59,7 +56,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Mi Portafolio'),
         actions: [
-          // Botón en el AppBar para ver la Firma del Desarrollador
           IconButton(
             icon: const Icon(Icons.badge_outlined),
             tooltip: 'Firma del Desarrollador',
@@ -69,12 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      // Mantenemos el estado de cada vista con IndexedStack
       body: IndexedStack(
         index: _currentIndex,
         children: views,
       ),
-      // Barra de navegación inferior moderna usando la dependencia google_nav_bar
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: isDark ? const Color(0xFF1E293B) : Colors.white,
@@ -130,9 +124,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-// -------------------------------------------------------------
-// VISTA 1: SOBRE MÍ / ¿QUIÉN SOY?
-// -------------------------------------------------------------
 class _AboutView extends StatelessWidget {
   const _AboutView();
 
@@ -145,7 +136,6 @@ class _AboutView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Imagen de perfil / Avatar con bordes estilizados
           Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
@@ -166,15 +156,11 @@ class _AboutView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 14),
-
-          // Nombre y Apellido
           const Text(
             'Hamad El Troudi',
             style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 4),
-
-          // Título o rol
           Text(
             'Estudiante de Ingeniería de Sistemas',
             style: TextStyle(
@@ -184,8 +170,6 @@ class _AboutView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-
-          // Enlaces rápidos
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -211,10 +195,7 @@ class _AboutView extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(height: 24),
-
-          // Tarjeta: ¿Quién soy?
           Card(
             child: Padding(
               padding: const EdgeInsets.all(18.0),
@@ -245,10 +226,7 @@ class _AboutView extends StatelessWidget {
               ),
             ),
           ),
-
           const SizedBox(height: 14),
-
-          // Tarjeta: Datos Académicos y Perfil
           Card(
             child: Padding(
               padding: const EdgeInsets.all(18.0),
@@ -290,7 +268,6 @@ class _AboutView extends StatelessWidget {
               ),
             ),
           ),
-
           const SizedBox(height: 10),
           const CustomFooter(),
         ],
@@ -299,7 +276,6 @@ class _AboutView extends StatelessWidget {
   }
 }
 
-// Widget auxiliar para items de información
 class _ItemDato extends StatelessWidget {
   final IconData icono;
   final String titulo;
@@ -341,9 +317,6 @@ class _ItemDato extends StatelessWidget {
   }
 }
 
-// -------------------------------------------------------------
-// VISTA 2: ¿QUÉ HAGO? / PROYECTOS & HABILIDADES
-// -------------------------------------------------------------
 class _WhatIDoView extends StatelessWidget {
   const _WhatIDoView();
 
@@ -389,7 +362,6 @@ class _WhatIDoView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Encabezado
           Text(
             '¿Qué hago?',
             style: TextStyle(
@@ -403,10 +375,7 @@ class _WhatIDoView extends StatelessWidget {
             'Desarrollo de soluciones de software, interfaces móviles amigables y sistemas bien estructurados.',
             style: TextStyle(fontSize: 14),
           ),
-
           const SizedBox(height: 20),
-
-          // Sección de Habilidades
           Text(
             'Habilidades y Tecnologías',
             style: TextStyle(
@@ -416,7 +385,6 @@ class _WhatIDoView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-
           Wrap(
             spacing: 8,
             runSpacing: 8,
@@ -444,10 +412,7 @@ class _WhatIDoView extends StatelessWidget {
               );
             }).toList(),
           ),
-
           const SizedBox(height: 24),
-
-          // Sección de Proyectos
           Text(
             'Proyectos Destacados',
             style: TextStyle(
@@ -457,10 +422,7 @@ class _WhatIDoView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-
-          // Lista de tarjetas de proyectos
           ..._listaProyectos.map((proyecto) => CustomCardProject(project: proyecto)),
-
           const SizedBox(height: 10),
           const CustomFooter(),
         ],
@@ -469,9 +431,6 @@ class _WhatIDoView extends StatelessWidget {
   }
 }
 
-// -------------------------------------------------------------
-// VISTA 3: HOBBIES & INTERESES
-// -------------------------------------------------------------
 class _HobbiesView extends StatelessWidget {
   const _HobbiesView();
 
@@ -522,7 +481,6 @@ class _HobbiesView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Título de la sección
           Text(
             'Mis Hobbies e Intereses',
             style: TextStyle(
@@ -537,10 +495,7 @@ class _HobbiesView extends StatelessWidget {
             style: TextStyle(fontSize: 14),
           ),
           const SizedBox(height: 18),
-
-          // Tarjetas de Hobbies
           ..._hobbies.map((hobby) => CustomCardHobby(hobby: hobby)),
-
           const SizedBox(height: 10),
           const CustomFooter(),
         ],
@@ -549,9 +504,6 @@ class _HobbiesView extends StatelessWidget {
   }
 }
 
-// -------------------------------------------------------------
-// VISTA 4: SECCIÓN DE COMENTARIOS (CON FORMULARIO)
-// -------------------------------------------------------------
 class _CommentsView extends StatefulWidget {
   final List<CommentModel> comentarios;
   final Function(CommentModel) onNuevoComentario;
@@ -566,10 +518,8 @@ class _CommentsView extends StatefulWidget {
 }
 
 class _CommentsViewState extends State<_CommentsView> {
-  // Clave del formulario para validaciones
   final _formKey = GlobalKey<FormState>();
 
-  // Controladores de texto para los campos
   final _nombreController = TextEditingController();
   final _correoController = TextEditingController();
   final _mensajeController = TextEditingController();
@@ -583,7 +533,6 @@ class _CommentsViewState extends State<_CommentsView> {
   }
 
   void _enviarComentario() {
-    // Validamos el formulario
     if (!(_formKey.currentState?.validate() ?? false)) {
       return;
     }
@@ -597,15 +546,12 @@ class _CommentsViewState extends State<_CommentsView> {
 
     widget.onNuevoComentario(nuevoComentario);
 
-    // Limpiamos los campos
     _nombreController.clear();
     _correoController.clear();
     _mensajeController.clear();
 
-    // Ocultar teclado
     FocusScope.of(context).unfocus();
 
-    // Notificación al usuario
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         backgroundColor: Colors.teal.shade700,
@@ -631,7 +577,6 @@ class _CommentsViewState extends State<_CommentsView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Título de la sección
           Text(
             'Sección de Comentarios',
             style: TextStyle(
@@ -646,8 +591,6 @@ class _CommentsViewState extends State<_CommentsView> {
             style: TextStyle(fontSize: 14),
           ),
           const SizedBox(height: 18),
-
-          // Formulario para dejar comentario
           Card(
             child: Padding(
               padding: const EdgeInsets.all(18.0),
@@ -698,10 +641,7 @@ class _CommentsViewState extends State<_CommentsView> {
               ),
             ),
           ),
-
           const SizedBox(height: 24),
-
-          // Lista de Comentarios Publicados
           Row(
             children: [
               Icon(Icons.forum_outlined, color: theme.colorScheme.primary),
@@ -713,7 +653,6 @@ class _CommentsViewState extends State<_CommentsView> {
             ],
           ),
           const SizedBox(height: 12),
-
           ...widget.comentarios.map((c) {
             return Card(
               margin: const EdgeInsets.only(bottom: 10),
@@ -742,7 +681,6 @@ class _CommentsViewState extends State<_CommentsView> {
               ),
             );
           }),
-
           const SizedBox(height: 10),
           const CustomFooter(),
         ],

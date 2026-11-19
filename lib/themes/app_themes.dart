@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppThemes {
-  // Color primario de la aplicación
-  static const Color primary = Color(0xFF0F766E); // Teal elegante
+  static const Color primary = Color(0xFF0F766E);
   static const Color primaryLight = Color(0xFF14B8A6);
 
-  // Tema Claro
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
@@ -40,7 +38,6 @@ class AppThemes {
     textTheme: GoogleFonts.outfitTextTheme(),
   );
 
-  // Tema Oscuro
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(

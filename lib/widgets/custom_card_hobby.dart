@@ -18,7 +18,6 @@ class CustomCardHobby extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Icono del hobby dentro de un círculo con color temático
             CircleAvatar(
               radius: 26,
               backgroundColor: hobby.accentColor.withValues(alpha: 0.15),
@@ -29,7 +28,6 @@ class CustomCardHobby extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 16),
-            // Título, categoría y descripción
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
