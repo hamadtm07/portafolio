@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const CommentModel(
       author: 'Abdul Aboujokh',
       email: 'abdul.aboujokh@unimar.edu.ve',
-      message: 'Quedó fino el portafolio hermano, la interfaz está súper limpia.',
+      message: 'البورتفوليو طالع ممتاز يا خوي، الواجهة مرتبة ونظيفة كتير.',
       date: '15 Nov 2026',
     ),
   ];
