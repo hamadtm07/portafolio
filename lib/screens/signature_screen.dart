@@ -88,7 +88,7 @@ class SignatureScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'Universidad Metropolitana • Caracas, Venezuela',
+                      'Universidad de Margarita (UNIMAR) • Isla de Margarita',
                       style: TextStyle(
                         fontSize: 12,
                         color: theme.textTheme.bodySmall?.color?.withValues(alpha: 0.7),
@@ -128,7 +128,7 @@ class SignatureScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Código de Verificación: #FL-2026-HT-UNIMET',
+                      'Código de Verificación: #FL-2026-HT-UNIMAR',
                       style: TextStyle(
                         fontSize: 10,
                         fontFamily: 'monospace',
@@ -186,10 +186,10 @@ class SignatureScreen extends StatelessWidget {
                         child: FaIcon(FontAwesomeIcons.envelope, size: 18),
                       ),
                       title: const Text('Correo Universitario'),
-                      subtitle: const Text('hamad.eltroudi@correo.unimet.edu.ve'),
+                      subtitle: const Text('hel_troudi.9491@unimar.edu.ve'),
                       trailing: IconButton(
                         icon: const Icon(Icons.copy_rounded, size: 20),
-                        onPressed: () => _copiarDato(context, 'hamad.eltroudi@correo.unimet.edu.ve'),
+                        onPressed: () => _copiarDato(context, 'hel_troudi.9491@unimar.edu.ve'),
                       ),
                     ),
                     const Divider(),
@@ -199,10 +199,10 @@ class SignatureScreen extends StatelessWidget {
                         child: FaIcon(FontAwesomeIcons.github, size: 18),
                       ),
                       title: const Text('GitHub'),
-                      subtitle: const Text('https://github.com/hamadeltroudi'),
+                      subtitle: const Text('https://github.com/hamadtm07'),
                       trailing: IconButton(
                         icon: const Icon(Icons.copy_rounded, size: 20),
-                        onPressed: () => _copiarDato(context, 'https://github.com/hamadeltroudi'),
+                        onPressed: () => _copiarDato(context, 'https://github.com/hamadtm07'),
                       ),
                     ),
                     const Divider(),
@@ -212,10 +212,10 @@ class SignatureScreen extends StatelessWidget {
                         child: FaIcon(FontAwesomeIcons.telegram, size: 18),
                       ),
                       title: const Text('Telegram Personal'),
-                      subtitle: const Text('@hamad_eltroudi'),
+                      subtitle: const Text('@hamadelt'),
                       trailing: IconButton(
                         icon: const Icon(Icons.copy_rounded, size: 20),
-                        onPressed: () => _copiarDato(context, '@hamad_eltroudi'),
+                        onPressed: () => _copiarDato(context, '@hamadelt'),
                       ),
                     ),
                   ],

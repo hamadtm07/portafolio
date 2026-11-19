@@ -18,7 +18,7 @@ class CustomFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
       child: Column(
         children: [
           const Divider(),
@@ -28,46 +28,32 @@ class CustomFooter extends StatelessWidget {
             children: [
               IconButton(
                 icon: const FaIcon(FontAwesomeIcons.github, size: 20),
-                onPressed: () => _mostrarInfoRed(context, 'GitHub', 'github.com/hamadeltroudi'),
+                onPressed: () => _mostrarInfoRed(context, 'GitHub', 'github.com/hamadtm07'),
                 tooltip: 'GitHub',
               ),
               IconButton(
-                icon: const FaIcon(FontAwesomeIcons.linkedin, size: 20),
-                onPressed: () => _mostrarInfoRed(context, 'LinkedIn', 'linkedin.com/in/hamad-el-troudi'),
-                tooltip: 'LinkedIn',
-              ),
-              IconButton(
                 icon: const FaIcon(FontAwesomeIcons.telegram, size: 20),
-                onPressed: () => _mostrarInfoRed(context, 'Telegram', '@hamad_eltroudi'),
+                onPressed: () => _mostrarInfoRed(context, 'Telegram', '@hamadelt'),
                 tooltip: 'Telegram',
               ),
               IconButton(
                 icon: const FaIcon(FontAwesomeIcons.envelope, size: 20),
-                onPressed: () => _mostrarInfoRed(context, 'Correo', 'hamad.eltroudi@correo.unimet.edu.ve'),
+                onPressed: () => _mostrarInfoRed(context, 'Correo', 'hel_troudi.9491@unimar.edu.ve'),
                 tooltip: 'Correo',
               ),
             ],
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 6),
           const Text(
             '© 2026 Hamad El Troudi',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
           ),
           const SizedBox(height: 2),
           Text(
-            'Estudiante de Ingeniería de Sistemas • Proyecto Portafolio',
+            'Ingeniería de Sistemas • Universidad de Margarita (UNIMAR)',
             style: TextStyle(
               fontSize: 11,
               color: Theme.of(context).textTheme.bodySmall?.color?.withValues(alpha: 0.7),
-            ),
-          ),
-          const SizedBox(height: 2),
-          Text(
-            'Desarrollado con Flutter & Dart',
-            style: TextStyle(
-              fontSize: 10,
-              fontStyle: FontStyle.italic,
-              color: Theme.of(context).colorScheme.primary,
             ),
           ),
         ],

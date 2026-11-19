@@ -24,9 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
       date: '18 Nov 2026',
     ),
     const CommentModel(
-      author: 'Carlos Mendoza',
-      email: 'carlos.m@unimet.edu.ve',
-      message: 'Muy buen portafolio Hamad, la interfaz con GoogleNavBar se ve súper fluida.',
+      author: 'Abdul Aboujokh',
+      email: 'abdul.aboujokh@unimar.edu.ve',
+      message: 'Quedó fino el portafolio hermano, la interfaz está súper limpia.',
       date: '15 Nov 2026',
     ),
   ];
@@ -185,7 +185,7 @@ class _AboutView extends StatelessWidget {
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('Contacto: hamad.eltroudi@correo.unimet.edu.ve'),
+                      content: Text('Correo: hel_troudi.9491@unimar.edu.ve'),
                       behavior: SnackBarBehavior.floating,
                     ),
                   );
@@ -214,12 +214,12 @@ class _AboutView extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    '¡Hola! Soy Hamad El Troudi, futuro Ingeniero de Sistemas con una gran pasión por la tecnología, el desarrollo de aplicaciones multiplataforma y la resolución de problemas mediante software bien diseñado.',
+                    '¡Hola! Soy Hamad El Troudi, estudiante de Ingeniería de Sistemas en la Universidad de Margarita (UNIMAR). Me apasiona la tecnología y aprender a programar aplicaciones móviles y web mientras avanzo en mi carrera.',
                     style: TextStyle(fontSize: 14, height: 1.4),
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Me caracterizo por ser una persona proactiva, orientada al detalle y con constante interés en aprender nuevas tecnologías y herramientas del ecosistema de software.',
+                    'Actualmente estoy cursando la materia Programación III, aprendiendo el desarrollo con Flutter y Dart, y practicando con proyectos sencillos y bien organizados.',
                     style: TextStyle(fontSize: 14, height: 1.4),
                   ),
                 ],
@@ -247,7 +247,7 @@ class _AboutView extends StatelessWidget {
                   const _ItemDato(
                     icono: Icons.apartment_rounded,
                     titulo: 'Universidad',
-                    valor: 'Universidad Metropolitana (UNIMET)',
+                    valor: 'Universidad de Margarita (UNIMAR)',
                   ),
                   const _ItemDato(
                     icono: Icons.menu_book_rounded,
@@ -262,7 +262,7 @@ class _AboutView extends StatelessWidget {
                   const _ItemDato(
                     icono: Icons.translate_rounded,
                     titulo: 'Idiomas',
-                    valor: 'Español (Nativo), Inglés (Intermedio/Avanzado)',
+                    valor: 'Español (Nativo), Inglés',
                   ),
                 ],
               ),
@@ -323,34 +323,26 @@ class _WhatIDoView extends StatelessWidget {
   static const List<ProjectModel> _listaProyectos = [
     ProjectModel(
       title: 'Bookea Mobile',
-      tag: 'Proyecto Móvil & Web',
-      description: 'Plataforma para la reserva y gestión de espacios de coworking, cubículos y salas de estudio universitarias.',
+      tag: 'Proyecto Universitario',
+      description: 'Plataforma para la reserva y gestión de espacios de estudio, cubículos y salas en la universidad.',
       imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&auto=format&fit=crop&q=80',
       technologies: ['Flutter', 'Node.js', 'PostgreSQL', 'Supabase'],
     ),
     ProjectModel(
-      title: 'FlComp Explorer',
-      tag: 'Catálogo de Componentes',
-      description: 'Aplicación para explorar los componentes fundamentales de Flutter: listas, sliders, inputs y navegación por rutas.',
-      imageUrl: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&auto=format&fit=crop&q=80',
-      technologies: ['Flutter', 'Dart', 'Material 3'],
-    ),
-    ProjectModel(
       title: 'Soma Studio App',
-      tag: 'Aplicación Deportiva',
-      description: 'Sistema integral de agenda, seguimiento de sesiones y control de usuarios para un centro de bienestar y pilates.',
+      tag: 'Proyecto Móvil',
+      description: 'Aplicación para la gestión de turnos, horarios y control de usuarios para un estudio deportivo.',
       imageUrl: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop&q=80',
-      technologies: ['Mobile', 'Flutter', 'Firebase'],
+      technologies: ['Flutter', 'Dart', 'Firebase'],
     ),
   ];
 
   static const List<Map<String, dynamic>> _habilidades = [
-    {'nombre': 'Flutter & Dart', 'nivel': 'Intermedio', 'icono': Icons.phone_android_rounded},
-    {'nombre': 'Python', 'nivel': 'Intermedio / Avanzado', 'icono': Icons.terminal_rounded},
-    {'nombre': 'C# & .NET', 'nivel': 'Intermedio', 'icono': Icons.code_rounded},
+    {'nombre': 'Flutter & Dart', 'nivel': 'Básico / Intermedio', 'icono': Icons.phone_android_rounded},
+    {'nombre': 'Python', 'nivel': 'Intermedio', 'icono': Icons.terminal_rounded},
+    {'nombre': 'C#', 'nivel': 'Intermedio', 'icono': Icons.code_rounded},
     {'nombre': 'Bases de Datos (SQL)', 'nivel': 'Intermedio', 'icono': Icons.storage_rounded},
     {'nombre': 'Git & GitHub', 'nivel': 'Intermedio', 'icono': Icons.source_rounded},
-    {'nombre': 'Diseño UI / UX', 'nivel': 'Básico / Intermedio', 'icono': Icons.palette_rounded},
   ];
 
   @override
@@ -372,12 +364,12 @@ class _WhatIDoView extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           const Text(
-            'Desarrollo de soluciones de software, interfaces móviles amigables y sistemas bien estructurados.',
+            'Proyectos de la carrera y herramientas que estoy aprendiendo en la universidad.',
             style: TextStyle(fontSize: 14),
           ),
           const SizedBox(height: 20),
           Text(
-            'Habilidades y Tecnologías',
+            'Habilidades y Lenguajes',
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -414,7 +406,7 @@ class _WhatIDoView extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           Text(
-            'Proyectos Destacados',
+            'Proyectos Realizados',
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -436,39 +428,32 @@ class _HobbiesView extends StatelessWidget {
 
   static const List<HobbyModel> _hobbies = [
     HobbyModel(
-      title: 'Desarrollo & Modding',
-      category: 'Tecnología',
-      description: 'Experimentar con scripts, servidores comunitarios (FiveM/GTA) y optimización de código para entornos interactivos.',
+      title: 'Fútbol',
+      category: 'Deporte',
+      description: 'Me gusta jugar partidos con amigos los fines de semana y ver los juegos de las ligas principales.',
+      icon: Icons.sports_soccer_rounded,
+      accentColor: Colors.green,
+    ),
+    HobbyModel(
+      title: 'Videojuegos de PC',
+      category: 'Gaming',
+      description: 'En mis tiempos libres juego en la computadora, principalmente Counter-Strike 2 y GTA V Online.',
       icon: Icons.sports_esports_rounded,
       accentColor: Colors.deepPurple,
     ),
     HobbyModel(
-      title: 'Música & Producción',
-      category: 'Creatividad',
-      description: 'Disfruto escuchar géneros como rock alternativo, synthwave y bandas sonoras mientras desarrollo software.',
-      icon: Icons.headphones_rounded,
+      title: 'Música',
+      category: 'Pasatiempo',
+      description: 'Suelo escuchar reggaetón y rock nacional para relajarme y cuando estoy frente a la computadora.',
+      icon: Icons.music_note_rounded,
       accentColor: Colors.teal,
     ),
     HobbyModel(
-      title: 'Ajedrez & Videojuegos Tácticos',
-      category: 'Estrategia',
-      description: 'Práctica de análisis de jugadas, toma de decisiones bajo presión y resolución de acertijos lógicos.',
-      icon: Icons.extension_rounded,
-      accentColor: Colors.amber,
-    ),
-    HobbyModel(
-      title: 'Entrenamiento Físico',
-      category: 'Salud & Deporte',
-      description: 'Rutinas de gimnasio y calistenia para mantener el equilibrio entre el estudio y el bienestar físico.',
+      title: 'Entrenar',
+      category: 'Salud',
+      description: 'Hacer ejercicio y mantenerme activo para despejar la mente del estudio universitario.',
       icon: Icons.fitness_center_rounded,
       accentColor: Colors.redAccent,
-    ),
-    HobbyModel(
-      title: 'Hardware & Optimización de PCs',
-      category: 'Hardware',
-      description: 'Ensamblaje de equipos, pruebas de rendimiento (benchmarking) y mantenimiento de sistemas operativos.',
-      icon: Icons.memory_rounded,
-      accentColor: Colors.blueAccent,
     ),
   ];
 
@@ -491,7 +476,7 @@ class _HobbiesView extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           const Text(
-            'Las actividades y pasatiempos que complementan mi formación académica y estimulan mi creatividad.',
+            'Las cosas que me gusta hacer fuera del horario de clases.',
             style: TextStyle(fontSize: 14),
           ),
           const SizedBox(height: 18),
